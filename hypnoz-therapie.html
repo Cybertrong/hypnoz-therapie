@@ -29,12 +29,10 @@
       overflow-x: hidden;
     }
 
-    /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--cream); }
     ::-webkit-scrollbar-thumb { background: var(--sage); border-radius: 3px; }
 
-    /* ── TOP BAR ── */
     .topbar {
       background: var(--sage-dark);
       color: var(--white);
@@ -53,7 +51,6 @@
     .topbar a:hover { opacity: 1; text-decoration: underline; }
     .topbar-right { display: flex; gap: 24px; }
 
-    /* ── NAVBAR ── */
     nav {
       position: fixed;
       top: 0;
@@ -131,7 +128,6 @@
     .nav-cta:hover { background: var(--sage-dark) !important; }
     .nav-cta::after { display: none !important; }
 
-    /* ── BURGER ── */
     .burger {
       display: flex;
       flex-direction: column;
@@ -152,9 +148,7 @@
       transition: transform 0.35s cubic-bezier(.77,0,.18,1), opacity 0.25s, width 0.35s, background 0.3s;
       transform-origin: center;
     }
-    nav.scrolled .burger span {
-      background: var(--sage-dark);
-    }
+    nav.scrolled .burger span { background: var(--sage-dark); }
     .burger span:nth-child(2) { width: 70%; margin-left: auto; }
     .burger:hover span { background: var(--sage); }
     .burger:hover span:nth-child(2) { width: 100%; }
@@ -162,7 +156,6 @@
     .burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .burger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
-    /* Mobile menu */
     .mobile-menu {
       display: none;
       position: fixed;
@@ -188,10 +181,7 @@
       transition: color 0.3s, transform 0.3s;
       display: inline-block;
     }
-    .mobile-menu a:hover {
-      color: var(--sage-light);
-      transform: scale(1.08);
-    }
+    .mobile-menu a:hover { color: var(--sage-light); transform: scale(1.08); }
     .mobile-menu .nav-cta-mobile {
       font-size: 1rem !important;
       font-family: 'Jost', sans-serif !important;
@@ -203,15 +193,9 @@
       font-weight: 600;
       transform: scale(1) !important;
     }
-    .mobile-menu .nav-cta-mobile:hover {
-      background: var(--white) !important;
-    }
+    .mobile-menu .nav-cta-mobile:hover { background: var(--white) !important; }
 
-    /* ── PARALLAX BASE ── */
-    .parallax-section {
-      position: relative;
-      overflow: hidden;
-    }
+    .parallax-section { position: relative; overflow: hidden; }
     .parallax-bg {
       position: absolute;
       inset: -20%;
@@ -220,12 +204,8 @@
       background-attachment: fixed;
       will-change: transform;
     }
-    .parallax-overlay {
-      position: absolute;
-      inset: 0;
-    }
+    .parallax-overlay { position: absolute; inset: 0; }
 
-    /* ── HERO ── */
     #accueil {
       height: 100vh;
       min-height: 640px;
@@ -331,7 +311,6 @@
       50% { transform: scaleY(0.5) translateY(10px); opacity: 0.4; }
     }
 
-    /* ── FEATURE STRIP ── */
     .features-strip {
       background: var(--sage);
       display: grid;
@@ -347,11 +326,7 @@
     }
     .feature-item:last-child { border-right: none; }
     .feature-item:hover { background: var(--sage-dark); }
-    .feature-icon {
-      width: 44px; height: 44px;
-      margin-bottom: 16px;
-      opacity: 0.9;
-    }
+    .feature-icon { width: 44px; height: 44px; margin-bottom: 16px; opacity: 0.9; }
     .feature-item h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.3rem;
@@ -360,7 +335,6 @@
     }
     .feature-item p { font-size: 0.87rem; opacity: 0.85; line-height: 1.6; font-weight: 300; }
 
-    /* ── SECTIONS COMMON ── */
     section { position: relative; }
     .section-inner {
       position: relative;
@@ -394,16 +368,9 @@
       max-width: 680px;
       font-weight: 300;
     }
-    .divider {
-      width: 56px; height: 2px;
-      background: var(--sage);
-      margin: 24px 0;
-    }
+    .divider { width: 56px; height: 2px; background: var(--sage); margin: 24px 0; }
 
-    /* ── QUI SOMMES-NOUS ── */
-    #qui-sommes-nous {
-      background: var(--cream);
-    }
+    #qui-sommes-nous { background: var(--cream); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -411,13 +378,12 @@
       align-items: center;
       margin-top: 60px;
     }
-    .about-image-wrap {
-      position: relative;
-    }
+    .about-image-wrap { position: relative; }
     .about-image-wrap img {
       width: 100%;
       height: 560px;
       object-fit: cover;
+      object-position: top;
       border-radius: 2px;
       display: block;
     }
@@ -431,18 +397,6 @@
       border-radius: 2px;
       z-index: -1;
     }
-    .about-image-badge {
-      position: absolute;
-      top: 24px; left: -24px;
-      background: var(--sage-dark);
-      color: var(--white);
-      padding: 20px 24px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      line-height: 1.3;
-      max-width: 180px;
-    }
-    .about-image-badge strong { font-size: 2.2rem; display: block; font-weight: 300; }
 
     .about-text .values-list {
       display: flex;
@@ -461,174 +415,58 @@
     }
     .value-item:hover { background: var(--sage-light); color: var(--white); transform: translateX(4px); }
     .value-item:hover p { color: rgba(255,255,255,0.9); }
-    .value-dot {
-      min-width: 8px; height: 8px;
-      background: var(--sage);
-      border-radius: 50%;
-      margin-top: 6px;
-    }
-    .value-item h4 {
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-      margin-bottom: 4px;
-    }
+    .value-dot { min-width: 8px; height: 8px; background: var(--sage); border-radius: 50%; margin-top: 6px; }
+    .value-item h4 { font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 4px; }
     .value-item p { font-size: 0.85rem; color: var(--mid); line-height: 1.6; font-weight: 300; }
 
-    /* ── OÙ NOUS TROUVER ── */
-    #ou-nous-trouver {
-      background: var(--sage-dark);
-      color: var(--white);
-    }
+    #ou-nous-trouver { background: var(--sage-dark); color: var(--white); }
     #ou-nous-trouver .section-title { color: var(--white); }
     #ou-nous-trouver .section-title em { color: var(--white); }
     #ou-nous-trouver .section-lead { color: var(--white); }
     #ou-nous-trouver .section-tag { color: var(--white); }
     #ou-nous-trouver .divider { background: var(--white); }
 
-    .location-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      margin-top: 60px;
-      align-items: start;
-    }
-    .location-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 40px;
-      border-radius: var(--radius);
-    }
-    .location-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-bottom: 24px;
-      color: var(--white);
-    }
-    .location-detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-    .loc-icon {
-      min-width: 20px;
-      color: var(--white);
-      margin-top: 2px;
-    }
-    .location-detail span {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      opacity: 0.9;
-      font-weight: 300;
-    }
+    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; align-items: start; }
+    .location-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); padding: 40px; border-radius: var(--radius); }
+    .location-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 24px; color: var(--white); }
+    .location-detail { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+    .loc-icon { min-width: 20px; color: var(--white); margin-top: 2px; }
+    .location-detail span { font-size: 0.9rem; line-height: 1.6; opacity: 0.9; font-weight: 300; }
     .map-placeholder {
-      width: 100%;
-      height: 320px;
+      width: 100%; height: 320px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 12px;
-      color: rgba(255,255,255,0.5);
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+      gap: 12px; color: rgba(255,255,255,0.5); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
     }
     .map-placeholder svg { opacity: 0.4; }
 
-    /* ── SERVICES ── */
-    #services {
-      background: var(--cream);
-    }
-    .services-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: end;
-      margin-bottom: 60px;
-    }
-    .services-image {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      border-radius: 2px;
-    }
-
-    .services-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-bottom: 80px;
-    }
-    .services-card {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 3/4;
-      cursor: pointer;
-    }
-    .services-card img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
+    #services { background: var(--cream); }
+    .services-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 60px; }
+    .services-image { width: 100%; height: 420px; object-fit: cover; border-radius: 2px; }
+    .services-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 80px; }
+    .services-card { position: relative; overflow: hidden; aspect-ratio: 3/4; cursor: pointer; }
+    .services-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
     .services-card:hover img { transform: scale(1.07); }
     .services-card-overlay {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(44,44,44,0.85) 0%, transparent 55%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 28px;
-      transition: background 0.4s;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 28px; transition: background 0.4s;
     }
     .services-card:hover .services-card-overlay { background: linear-gradient(to top, rgba(79,114,96,0.9) 0%, rgba(79,114,96,0.3) 100%); }
-    .services-card-overlay h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .services-card-link {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+    .services-card-overlay h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--white); margin-bottom: 8px; }
+    .services-card-link { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s; }
     .services-card:hover .services-card-link { color: var(--white); }
 
-    /* ── AREAS OF FOCUS ── */
-    .focus-section {
-      background: var(--warm);
-      padding: 80px 0;
-      margin: 0 -40px;
-    }
-    .focus-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-    .focus-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
+    .focus-section { background: var(--warm); padding: 80px 0; margin: 0 -40px; }
+    .focus-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    .focus-header { text-align: center; margin-bottom: 56px; }
     .focus-header .section-title { font-size: clamp(1.8rem, 3vw, 2.6rem); }
     .focus-header p { max-width: 560px; margin: 0 auto; color: var(--mid); font-size: 0.95rem; line-height: 1.8; }
     .focus-header .divider { margin: 20px auto; }
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+    .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .focus-card {
       background: var(--white);
       padding: 32px 28px;
@@ -636,137 +474,36 @@
       border-bottom: 3px solid transparent;
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
-    .focus-card:hover {
-      border-bottom-color: var(--sage);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
-    }
-    .focus-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
-      font-weight: 300;
-      color: var(--sage-light);
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-    .focus-card h3 {
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      color: var(--charcoal);
-    }
+    .focus-card:hover { border-bottom-color: var(--sage); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+    .focus-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--sage-light); line-height: 1; margin-bottom: 12px; }
+    .focus-card h3 { font-weight: 600; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; color: var(--charcoal); }
     .focus-card p { font-size: 0.87rem; color: var(--mid); line-height: 1.7; font-weight: 300; }
-    .focus-card a {
-      display: inline-block;
-      margin-top: 16px;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--sage-dark);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+    .focus-card a { display: inline-block; margin-top: 16px; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage-dark); text-decoration: none; font-weight: 500; transition: color 0.3s; }
     .focus-card a:hover { color: var(--sage); }
 
-    /* ── CTA BAND ── */
-    #cta-band {
-      min-height: 480px;
-      display: flex;
-      align-items: center;
-    }
-    #cta-band .parallax-bg {
-      background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&auto=format&fit=crop');
-    }
+    #cta-band { min-height: 480px; display: flex; align-items: center; }
+    #cta-band .parallax-bg { background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&auto=format&fit=crop'); }
     #cta-band .parallax-overlay { background: linear-gradient(to right, rgba(79,114,96,0.88), rgba(44,44,44,0.6)); }
-    .cta-band-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 40px;
-      color: var(--white);
-    }
+    .cta-band-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 80px 40px; color: var(--white); }
     .cta-band-content .section-tag { color: rgba(255,255,255,0.7); }
     .cta-band-content .section-title { color: var(--white); max-width: 640px; }
     .cta-band-content p { max-width: 540px; line-height: 1.8; opacity: 0.9; margin-bottom: 36px; font-weight: 300; }
     .cta-band-btns { display: flex; gap: 16px; flex-wrap: wrap; }
 
-    /* ── CONTACT ── */
-    #contact {
-      background: var(--cream);
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 80px;
-      margin-top: 60px;
-    }
-    .contact-info h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      margin-bottom: 32px;
-      color: var(--charcoal);
-    }
-    .contact-detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .contact-icon {
-      width: 40px; height: 40px;
-      background: var(--warm);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--sage-dark);
-    }
-    .contact-detail-text span {
-      display: block;
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-bottom: 4px;
-      font-weight: 500;
-    }
+    #contact { background: var(--cream); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; margin-top: 60px; }
+    .contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 32px; color: var(--charcoal); }
+    .contact-detail { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+    .contact-icon { width: 40px; height: 40px; background: var(--warm); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sage-dark); }
+    .contact-detail-text span { display: block; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 4px; font-weight: 500; }
     .contact-detail-text p { font-size: 0.95rem; color: var(--charcoal); line-height: 1.6; font-weight: 300; }
-
-    .contact-form {
-      background: var(--white);
-      padding: 48px 44px;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 40px rgba(0,0,0,0.06);
-    }
-    .contact-form h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 400;
-      margin-bottom: 32px;
-      color: var(--charcoal);
-    }
+    .contact-form { background: var(--white); padding: 48px 44px; border-radius: var(--radius); box-shadow: 0 4px 40px rgba(0,0,0,0.06); }
+    .contact-form h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 32px; color: var(--charcoal); }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-group { margin-bottom: 20px; }
-    .form-group label {
-      display: block;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 13px 16px;
+    .form-group label { display: block; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); margin-bottom: 8px; font-weight: 500; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 13px 16px;
       background: var(--cream);
       border: 1.5px solid transparent;
       border-radius: var(--radius);
@@ -776,130 +513,58 @@
       outline: none;
       transition: border-color 0.3s, background 0.3s;
     }
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--sage);
-      background: var(--white);
-    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--sage); background: var(--white); }
     .form-group textarea { min-height: 120px; resize: vertical; }
     .form-submit {
-      width: 100%;
-      background: var(--sage);
-      color: var(--white);
-      padding: 15px;
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Jost', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.3s;
+      width: 100%; background: var(--sage); color: var(--white); padding: 15px; border: none;
+      border-radius: var(--radius); font-family: 'Jost', sans-serif; font-size: 0.82rem;
+      font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; transition: background 0.3s;
     }
     .form-submit:hover { background: var(--sage-dark); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--charcoal);
-      color: var(--white);
-    }
+    footer { background: var(--charcoal); color: var(--white); }
     .footer-main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 72px 40px 48px;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1.5fr;
-      gap: 60px;
+      max-width: 1200px; margin: 0 auto; padding: 72px 40px 48px;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px;
     }
     .footer-brand .logo { color: var(--white); font-size: 1.5rem; }
     .footer-brand .logo span { color: var(--sage-light); }
-    .footer-brand p {
-      margin-top: 18px;
-      font-size: 0.87rem;
-      line-height: 1.8;
-      opacity: 0.65;
-      font-weight: 300;
-    }
-    .footer-social {
-      display: flex;
-      gap: 12px;
-      margin-top: 24px;
-    }
+    .footer-brand p { margin-top: 18px; font-size: 0.87rem; line-height: 1.8; opacity: 0.65; font-weight: 300; }
+    .footer-social { display: flex; gap: 12px; margin-top: 24px; }
     .social-btn {
-      width: 38px; height: 38px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      font-size: 0.75rem;
+      width: 38px; height: 38px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.75rem;
       transition: border-color 0.3s, color 0.3s, background 0.3s;
     }
     .social-btn:hover { border-color: var(--sage); color: var(--sage); background: rgba(122,158,135,0.1); }
-
-    .footer-col h4 {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--sage-light);
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
+    .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 20px; font-weight: 500; }
     .footer-col ul { list-style: none; }
     .footer-col li { margin-bottom: 12px; }
-    .footer-col a {
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 300;
-      transition: color 0.3s;
-    }
+    .footer-col a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; font-weight: 300; transition: color 0.3s; }
     .footer-col a:hover { color: var(--sage-light); }
-
-    .footer-contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
     .footer-contact-item svg { color: var(--sage-light); flex-shrink: 0; margin-top: 1px; }
     .footer-contact-item span { font-size: 0.87rem; opacity: 0.65; line-height: 1.5; font-weight: 300; }
-
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 24px 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      opacity: 0.5;
-      flex-wrap: wrap;
-      gap: 8px;
+      border-top: 1px solid rgba(255,255,255,0.08); padding: 24px 40px;
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.78rem; opacity: 0.5; flex-wrap: wrap; gap: 8px;
     }
 
-    /* ── REVEAL ANIMATION ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .features-strip { grid-template-columns: 1fr; }
       .feature-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
       .about-grid, .services-intro, .location-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-image-wrap img { height: 380px; }
       .services-cards { grid-template-columns: 1fr 1fr; }
       .focus-grid { grid-template-columns: 1fr 1fr; }
       .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; }
@@ -915,12 +580,12 @@
       .footer-main { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .focus-section { margin: 0 -24px; }
+      .about-image-wrap img { height: 300px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <div class="topbar">
     <div class="topbar-left">
       <a href="tel:+15147468201">📞 (514) 746-8201</a>
@@ -931,7 +596,6 @@
     </div>
   </div>
 
-  <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#accueil" class="logo">Hypnoz<span>-Thérapie</span></a>
@@ -948,7 +612,6 @@
     </div>
   </nav>
 
-  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#accueil" class="mobile-link">Accueil</a>
     <a href="#qui-sommes-nous" class="mobile-link">Qui suis-je ?</a>
@@ -956,7 +619,6 @@
     <a href="#contact" class="nav-cta-mobile mobile-link">Me Contacter</a>
   </div>
 
-  <!-- HERO -->
   <section id="accueil" class="parallax-section">
     <div class="parallax-bg" id="heroBg"></div>
     <div class="parallax-overlay"></div>
@@ -975,7 +637,6 @@
     </div>
   </section>
 
-  <!-- FEATURE STRIP -->
   <div class="features-strip">
     <div class="feature-item reveal">
       <svg class="feature-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1003,10 +664,13 @@
     </div>
   </div>
 
-  <!-- QUI SOMMES-NOUS -->
   <section id="qui-sommes-nous">
     <div class="section-inner">
-      <div class="about-grid" style="grid-template-columns: 1fr;">
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <img src="Photo%20Boby.JPG" alt="Photo du thérapeute" />
+          <div class="about-image-accent"></div>
+        </div>
         <div class="about-text">
           <span class="section-tag reveal">Qui suis-je ?</span>
           <h2 class="section-title reveal reveal-delay-1">Qui <em>suis-je</em> ?</h2>
@@ -1042,44 +706,32 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
     </div>
   </section>
 
-  <!-- QU'EST-CE QUE L'HYPNOSE -->
   <section id="qu-est-ce-hypnose" style="background: var(--sage-dark); color: var(--white);">
     <div class="section-inner">
       <span class="section-tag reveal" style="color: var(--white);">Comprendre</span>
       <h2 class="section-title reveal reveal-delay-1" style="color: var(--white);">Qu'est-ce que <em style="color: var(--white);">l'hypnose</em> ?</h2>
       <div class="divider reveal reveal-delay-2" style="background: var(--white);"></div>
-
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; margin-bottom: 48px;">
         <div class="reveal" style="background: rgba(255,255,255,0.08); padding: 28px; border-radius: 4px; border-left: 3px solid var(--sage-light); backdrop-filter: blur(10px);">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--sage-light)" stroke-width="1.5" style="margin-bottom: 12px;">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--sage-light)" stroke-width="1.5" style="margin-bottom: 12px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <h4 style="font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; color: var(--sage-light);">Un état familier</h4>
           <p style="font-size: 0.88rem; line-height: 1.6; opacity: 0.9;">L'hypnose est un état modifié de conscience que l'on expérimente chaque jour sans même s'en rendre compte, un peu comme si vous étiez dans la lune ou dans un doux rêve, sauf que... vous ne dormez pas !</p>
         </div>
-
         <div class="reveal reveal-delay-1" style="background: rgba(255,255,255,0.08); padding: 28px; border-radius: 4px; border-left: 3px solid var(--sage-light); backdrop-filter: blur(10px);">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--sage-light)" stroke-width="1.5" style="margin-bottom: 12px;">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
-          </svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--sage-light)" stroke-width="1.5" style="margin-bottom: 12px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
           <h4 style="font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; color: var(--sage-light);">Action sur le subconscient</h4>
           <p style="font-size: 0.88rem; line-height: 1.6; opacity: 0.9;">Pendant la séance hypnotique, on travaille sur vos blocages inconscients pour apporter le changement que vous désirez.</p>
         </div>
-
         <div class="reveal reveal-delay-2" style="background: rgba(255,255,255,0.08); padding: 28px; border-radius: 4px; border-left: 3px solid var(--sage-light); backdrop-filter: blur(10px);">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--sage-light)" stroke-width="1.5" style="margin-bottom: 12px;">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          </svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--sage-light)" stroke-width="1.5" style="margin-bottom: 12px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           <h4 style="font-weight: 600; font-size: 0.95rem; margin-bottom: 8px; color: var(--sage-light);">Rien de magique</h4>
           <p style="font-size: 0.88rem; line-height: 1.6; opacity: 0.9;">J'explore juste votre imaginaire pour y trouver des solutions qui vous conviennent. L'important est que vous soyez bien.</p>
         </div>
       </div>
-
       <div class="reveal" style="background: linear-gradient(135deg, rgba(168,197,176,0.15) 0%, rgba(122,158,135,0.1) 100%); padding: 32px; border-radius: 4px; margin-bottom: 48px; border: 1px solid rgba(255,255,255,0.1);">
         <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 16px; color: var(--sage-light);">Votre vigilance et contrôle</h4>
         <p style="font-size: 0.9rem; line-height: 1.8; opacity: 0.95;">Sous hypnose, votre état de vigilance est moindre, vous êtes détendu comme en veille. Sachez que <strong>toutes vos fonctions restent actives</strong> : vous pouvez bouger, vous repositionner au besoin. Vous pouvez parler, et à tout moment, ouvrir les yeux si vous le désirez.</p>
       </div>
-
       <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2);">
         <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 24px; color: var(--sage-light);">💭 Exemple concret de l'hypnose</h3>
         <div style="background: rgba(255,255,255,0.05); padding: 28px; border-radius: 4px; border-left: 4px solid var(--sage-light);">
@@ -1091,7 +743,6 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services">
     <div class="section-inner">
       <div class="services-intro">
@@ -1103,28 +754,20 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
           <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:32px;background:var(--sage);color:white;border:none;cursor:pointer;">Commencer mon parcours</a>
         </div>
       </div>
-
       <div class="services-cards">
         <div class="services-card reveal">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&auto=format&fit=crop" alt="Thérapie individuelle" />
-          <div class="services-card-overlay">
-            <h3>Thérapie Individuelle</h3>
-          </div>
+          <div class="services-card-overlay"><h3>Thérapie Individuelle</h3></div>
         </div>
         <div class="services-card reveal reveal-delay-1">
           <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&auto=format&fit=crop" alt="Transformation du quotidien" />
-          <div class="services-card-overlay">
-            <h3>Retour à l'équilibre émotionnel</h3>
-          </div>
+          <div class="services-card-overlay"><h3>Retour à l'équilibre émotionnel</h3></div>
         </div>
         <div class="services-card reveal reveal-delay-2">
           <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&auto=format&fit=crop" alt="Apaisement" />
-          <div class="services-card-overlay">
-            <h3>Apaisement</h3>
-          </div>
+          <div class="services-card-overlay"><h3>Apaisement</h3></div>
         </div>
       </div>
-
       <div class="focus-section" style="margin:0 -40px;padding:80px 0;">
         <div class="focus-inner">
           <div class="focus-header">
@@ -1134,59 +777,21 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
             <p>Chaque problématique mérite une attention particulière. Voici les domaines dans lesquels j'excelle.</p>
           </div>
           <div class="focus-grid">
-            <div class="focus-card reveal">
-              <div class="focus-num">01</div>
-              <h3>Troubles de l'humeur - Dépression</h3>
-              <p>L'hypnose accompagne votre retour à l'équilibre émotionnel en travaillant sur les blocages inconscients et en renforçant votre ressenti de bien-être.</p>
-            </div>
-            <div class="focus-card reveal reveal-delay-1">
-              <div class="focus-num">02</div>
-              <h3>Coaching sportif</h3>
-              <p>Optimisez vos performances mentales et physiques grâce à l'hypnose pour reprogrammer votre potentiel athlétique et renforcer votre confiance en compétition.</p>
-            </div>
-            <div class="focus-card reveal reveal-delay-2">
-              <div class="focus-num">03</div>
-              <h3>Gestion de la douleur</h3>
-              <p>L'hypnothérapie comme outil puissant pour moduler la perception de la douleur chronique.</p>
-            </div>
-            <div class="focus-card reveal reveal-delay-1">
-              <div class="focus-num">04</div>
-              <h3>Arrêt du tabac</h3>
-              <p>Dites adieu à la cigarette avec des techniques hypnotiques efficaces et durables.</p>
-            </div>
-            <div class="focus-card reveal reveal-delay-2">
-              <div class="focus-num">05</div>
-              <h3>Troubles du sommeil</h3>
-              <p>Retrouvez un sommeil réparateur et régulier en reprogrammant votre subconscient.</p>
-            </div>
-            <div class="focus-card reveal reveal-delay-3">
-              <div class="focus-num">06</div>
-              <h3>Gestion du poids</h3>
-              <p>Transformez votre relation à la nourriture et reprogrammez votre subconscient pour atteindre vos objectifs de poids de manière durable et bienveillante.</p>
-            </div>
-            <div class="focus-card reveal">
-              <div class="focus-num">07</div>
-              <h3>Anxiété</h3>
-              <p>Apaisez votre esprit en accédant à un état de calme profond et apprenez à gérer les pensées envahissantes pour retrouver sérénité et équilibre.</p>
-            </div>
-            <div class="focus-card reveal reveal-delay-1">
-              <div class="focus-num">08</div>
-              <h3>Phobie &amp; peurs</h3>
-              <p>Surmontez vos peurs limitantes et récupérez votre liberté de vivre sans restrictions.</p>
-            </div>
-            <div class="focus-card reveal reveal-delay-2">
-              <div class="focus-num">09</div>
-              <h3>Préparation aux examens</h3>
-              <p>Maîtrisez le stress, renforcez votre concentration et optimisez votre mémorisation pour aborder vos examens avec confiance et sérénité.</p>
-            </div>
+            <div class="focus-card reveal"><div class="focus-num">01</div><h3>Troubles de l'humeur - Dépression</h3><p>L'hypnose accompagne votre retour à l'équilibre émotionnel en travaillant sur les blocages inconscients et en renforçant votre ressenti de bien-être.</p></div>
+            <div class="focus-card reveal reveal-delay-1"><div class="focus-num">02</div><h3>Coaching sportif</h3><p>Optimisez vos performances mentales et physiques grâce à l'hypnose pour reprogrammer votre potentiel athlétique et renforcer votre confiance en compétition.</p></div>
+            <div class="focus-card reveal reveal-delay-2"><div class="focus-num">03</div><h3>Gestion de la douleur</h3><p>L'hypnothérapie comme outil puissant pour moduler la perception de la douleur chronique.</p></div>
+            <div class="focus-card reveal reveal-delay-1"><div class="focus-num">04</div><h3>Arrêt du tabac</h3><p>Dites adieu à la cigarette avec des techniques hypnotiques efficaces et durables.</p></div>
+            <div class="focus-card reveal reveal-delay-2"><div class="focus-num">05</div><h3>Troubles du sommeil</h3><p>Retrouvez un sommeil réparateur et régulier en reprogrammant votre subconscient.</p></div>
+            <div class="focus-card reveal reveal-delay-3"><div class="focus-num">06</div><h3>Gestion du poids</h3><p>Transformez votre relation à la nourriture et reprogrammez votre subconscient pour atteindre vos objectifs de poids de manière durable et bienveillante.</p></div>
+            <div class="focus-card reveal"><div class="focus-num">07</div><h3>Anxiété</h3><p>Apaisez votre esprit en accédant à un état de calme profond et apprenez à gérer les pensées envahissantes pour retrouver sérénité et équilibre.</p></div>
+            <div class="focus-card reveal reveal-delay-1"><div class="focus-num">08</div><h3>Phobie &amp; peurs</h3><p>Surmontez vos peurs limitantes et récupérez votre liberté de vivre sans restrictions.</p></div>
+            <div class="focus-card reveal reveal-delay-2"><div class="focus-num">09</div><h3>Préparation aux examens</h3><p>Maîtrisez le stress, renforcez votre concentration et optimisez votre mémorisation pour aborder vos examens avec confiance et sérénité.</p></div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- CTA BAND -->
   <section id="cta-band" class="parallax-section">
     <div class="parallax-bg" id="ctaBg"></div>
     <div class="parallax-overlay"></div>
@@ -1201,7 +806,6 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="section-inner">
       <span class="section-tag reveal">Me contacter</span>
@@ -1211,71 +815,32 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
         <div class="contact-info reveal">
           <h3>Je suis à votre écoute</h3>
           <div class="contact-detail">
-            <div class="contact-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-            </div>
-            <div class="contact-detail-text">
-              <span>Téléphone</span>
-              <p>(514) 746-8201</p>
-            </div>
+            <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div class="contact-detail-text"><span>Téléphone</span><p>(514) 746-8201</p></div>
           </div>
           <div class="contact-detail">
-            <div class="contact-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-            </div>
-            <div class="contact-detail-text">
-              <span>Adresse</span>
-              <p>Montréal, Qc</p>
-            </div>
+            <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <div class="contact-detail-text"><span>Adresse</span><p>Montréal, Qc</p></div>
           </div>
           <div class="contact-detail">
-            <div class="contact-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-              </svg>
-            </div>
-            <div class="contact-detail-text">
-              <span>Horaires</span>
-              <p>Lun–Ven : 9h – 19h</p>
-            </div>
+            <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="contact-detail-text"><span>Horaires</span><p>Lun–Ven : 9h – 19h</p></div>
           </div>
         </div>
-
         <div class="contact-form reveal reveal-delay-2">
           <h3>Envoyez-moi un message</h3>
-          <div id="form-success" style="display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:4px;padding:20px;text-align:center;color:#2e7d32;margin-bottom:20px;">
-            <strong>Message envoyé !</strong><br>Je vous répondrai dans les plus brefs délais.
-          </div>
-          <div id="form-error" style="display:none;background:#ffebee;border:1px solid #ef9a9a;border-radius:4px;padding:20px;text-align:center;color:#c62828;margin-bottom:20px;">
-            Une erreur est survenue. Veuillez réessayer ou appeler le (514) 746-8201.
-          </div>
+          <div id="form-success" style="display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:4px;padding:20px;text-align:center;color:#2e7d32;margin-bottom:20px;"><strong>Message envoyé !</strong><br>Je vous répondrai dans les plus brefs délais.</div>
+          <div id="form-error" style="display:none;background:#ffebee;border:1px solid #ef9a9a;border-radius:4px;padding:20px;text-align:center;color:#c62828;margin-bottom:20px;">Une erreur est survenue. Veuillez réessayer ou appeler le (514) 746-8201.</div>
           <form id="contactForm" action="https://formspree.io/f/xpwzgkrd" method="POST" novalidate>
-            <!-- Anti-spam honeypot -->
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
             <input type="hidden" name="_subject" value="Nouveau message — Hypnoz-Thérapie">
             <div class="form-row">
-              <div class="form-group">
-                <label for="f-prenom">Prénom <span style="color:var(--sage)">*</span></label>
-                <input id="f-prenom" type="text" name="prenom" placeholder="Votre prénom" required minlength="2" maxlength="50">
-              </div>
-              <div class="form-group">
-                <label for="f-nom">Nom <span style="color:var(--sage)">*</span></label>
-                <input id="f-nom" type="text" name="nom" placeholder="Votre nom" required minlength="2" maxlength="50">
-              </div>
+              <div class="form-group"><label for="f-prenom">Prénom <span style="color:var(--sage)">*</span></label><input id="f-prenom" type="text" name="prenom" placeholder="Votre prénom" required minlength="2" maxlength="50"></div>
+              <div class="form-group"><label for="f-nom">Nom <span style="color:var(--sage)">*</span></label><input id="f-nom" type="text" name="nom" placeholder="Votre nom" required minlength="2" maxlength="50"></div>
             </div>
             <div class="form-row">
-              <div class="form-group">
-                <label for="f-email">Courriel <span style="color:var(--sage)">*</span></label>
-                <input id="f-email" type="email" name="email" placeholder="votre@email.com" required maxlength="100">
-              </div>
-              <div class="form-group">
-                <label for="f-tel">Téléphone</label>
-                <input id="f-tel" type="tel" name="telephone" placeholder="(514) 000-0000" maxlength="20">
-              </div>
+              <div class="form-group"><label for="f-email">Courriel <span style="color:var(--sage)">*</span></label><input id="f-email" type="email" name="email" placeholder="votre@email.com" required maxlength="100"></div>
+              <div class="form-group"><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" name="telephone" placeholder="(514) 000-0000" maxlength="20"></div>
             </div>
             <div class="form-group">
               <label for="f-service">Service souhaité <span style="color:var(--sage)">*</span></label>
@@ -1293,10 +858,7 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
                 <option>Autre</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="f-message">Votre message <span style="color:var(--sage)">*</span></label>
-              <textarea id="f-message" name="message" placeholder="Décrivez brièvement votre démarche ou posez vos questions..." required minlength="10" maxlength="2000"></textarea>
-            </div>
+            <div class="form-group"><label for="f-message">Votre message <span style="color:var(--sage)">*</span></label><textarea id="f-message" name="message" placeholder="Décrivez brièvement votre démarche ou posez vos questions..." required minlength="10" maxlength="2000"></textarea></div>
             <button type="submit" class="form-submit" id="form-btn">Envoyer le message</button>
           </form>
         </div>
@@ -1304,7 +866,6 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-main">
       <div class="footer-brand">
@@ -1313,56 +874,30 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
       </div>
       <div class="footer-col">
         <h4>Coordonnée</h4>
-        <div class="footer-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-          </svg>
-          <span>Montréal, Qc</span>
-        </div>
-        <div class="footer-contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-          </svg>
-          <span>(514) 746-8201</span>
-        </div>
+        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg><span>Montréal, Qc</span></div>
+        <div class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg><span>(514) 746-8201</span></div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Hypnoz-Thérapie. Tous droits réservés.</span>
-    </div>
+    <div class="footer-bottom"><span>© 2026 Hypnoz-Thérapie. Tous droits réservés.</span></div>
   </footer>
 
   <script>
-    // ── NAVBAR SCROLL ──
     const navbar = document.getElementById('navbar');
     const topbar = document.querySelector('.topbar');
     window.addEventListener('scroll', () => {
       const topbarH = topbar ? topbar.offsetHeight : 0;
-      if (window.scrollY > 60) {
-        navbar.classList.add('scrolled');
-        navbar.style.top = '0';
-      } else {
-        navbar.classList.remove('scrolled');
-        navbar.style.top = topbarH + 'px';
-      }
+      if (window.scrollY > 60) { navbar.classList.add('scrolled'); navbar.style.top = '0'; }
+      else { navbar.classList.remove('scrolled'); navbar.style.top = topbarH + 'px'; }
     });
     navbar.style.top = (topbar ? topbar.offsetHeight : 0) + 'px';
 
-    // ── BURGER ──
     const burger = document.getElementById('burger');
     const mobileMenu = document.getElementById('mobileMenu');
-    burger.addEventListener('click', () => {
-      burger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
+    burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
     document.querySelectorAll('.mobile-link').forEach(l => {
-      l.addEventListener('click', () => {
-        burger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-      });
+      l.addEventListener('click', () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); });
     });
 
-    // ── PARALLAX ──
     function updateParallax() {
       const scrollY = window.scrollY;
       const heroBg = document.getElementById('heroBg');
@@ -1371,55 +906,39 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
       if (ctaBg) {
         const ctaSection = ctaBg.closest('.parallax-section');
         const ctaTop = ctaSection.getBoundingClientRect().top + scrollY;
-        const offset = (scrollY - ctaTop) * 0.3;
-        ctaBg.style.transform = `translateY(${offset}px)`;
+        ctaBg.style.transform = `translateY(${(scrollY - ctaTop) * 0.3}px)`;
       }
     }
     window.addEventListener('scroll', updateParallax, { passive: true });
     updateParallax();
 
-    // ── SCROLL REVEAL ──
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.12 });
     reveals.forEach(r => observer.observe(r));
 
-    // ── HERO REVEAL on load ──
     window.addEventListener('load', () => {
-      document.querySelectorAll('.hero-content .reveal').forEach(el => {
-        setTimeout(() => el.classList.add('visible'), 300);
-      });
+      document.querySelectorAll('.hero-content .reveal').forEach(el => setTimeout(() => el.classList.add('visible'), 300));
     });
 
-    // ── CONTACT FORM ──
     const contactForm = document.getElementById('contactForm');
     const formBtn = document.getElementById('form-btn');
     const formSuccess = document.getElementById('form-success');
     const formError = document.getElementById('form-error');
 
-    function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
-    }
-
+    function isValidEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email); }
     let submitCount = parseInt(sessionStorage.getItem('fs_count') || '0');
 
     contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       formSuccess.style.display = 'none';
       formError.style.display = 'none';
-
       if (submitCount >= 3) {
         formError.style.display = 'block';
         formError.textContent = 'Trop de tentatives. Veuillez appeler le (514) 746-8201.';
         return;
       }
-
       const email = document.getElementById('f-email').value.trim();
       if (!isValidEmail(email)) {
         document.getElementById('f-email').focus();
@@ -1427,35 +946,20 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
         return;
       }
       document.getElementById('f-email').style.borderColor = '';
-
       if (contactForm.querySelector('[name="_gotcha"]').value) return;
-
       formBtn.disabled = true;
       formBtn.textContent = 'Envoi en cours...';
-
       try {
-        const data = new FormData(contactForm);
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-
+        const response = await fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm), headers: { 'Accept': 'application/json' } });
         if (response.ok) {
           submitCount++;
           sessionStorage.setItem('fs_count', submitCount);
           contactForm.reset();
           formSuccess.style.display = 'block';
           formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        } else {
-          throw new Error('server');
-        }
-      } catch {
-        formError.style.display = 'block';
-      } finally {
-        formBtn.disabled = false;
-        formBtn.textContent = 'Envoyer le message';
-      }
+        } else { throw new Error('server'); }
+      } catch { formError.style.display = 'block'; }
+      finally { formBtn.disabled = false; formBtn.textContent = 'Envoyer le message'; }
     });
   </script>
 </body>
