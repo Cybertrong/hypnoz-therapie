@@ -1049,7 +1049,6 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
       <h2 class="section-title reveal reveal-delay-1" style="color: var(--white);">Qu'est-ce que <em style="color: var(--white);">l'hypnose</em> ?</h2>
       <div class="divider reveal reveal-delay-2" style="background: var(--white);"></div>
 
-      <!-- Grille de points clés -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; margin-bottom: 48px;">
         <div class="reveal" style="background: rgba(255,255,255,0.08); padding: 28px; border-radius: 4px; border-left: 3px solid var(--sage-light); backdrop-filter: blur(10px);">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--sage-light)" stroke-width="1.5" style="margin-bottom: 12px;">
@@ -1076,13 +1075,11 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
         </div>
       </div>
 
-      <!-- Section vigilance -->
       <div class="reveal" style="background: linear-gradient(135deg, rgba(168,197,176,0.15) 0%, rgba(122,158,135,0.1) 100%); padding: 32px; border-radius: 4px; margin-bottom: 48px; border: 1px solid rgba(255,255,255,0.1);">
         <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 16px; color: var(--sage-light);">Votre vigilance et contrôle</h4>
         <p style="font-size: 0.9rem; line-height: 1.8; opacity: 0.95;">Sous hypnose, votre état de vigilance est moindre, vous êtes détendu comme en veille. Sachez que <strong>toutes vos fonctions restent actives</strong> : vous pouvez bouger, vous repositionner au besoin. Vous pouvez parler, et à tout moment, ouvrir les yeux si vous le désirez.</p>
       </div>
 
-      <!-- Exemple concret -->
       <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2);">
         <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 24px; color: var(--sage-light);">💭 Exemple concret de l'hypnose</h3>
         <div style="background: rgba(255,255,255,0.05); padding: 28px; border-radius: 4px; border-left: 4px solid var(--sage-light);">
@@ -1103,7 +1100,7 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
           <h2 class="section-title reveal reveal-delay-1">Services</h2>
           <div class="divider reveal reveal-delay-2"></div>
           <p class="section-lead reveal reveal-delay-2">Je vous propose une gamme complète de thérapies hypnotiques et complémentaires pour accompagner votre chemin vers le mieux-être, à votre rythme et selon vos besoins.</p>
-          <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:32px;background:var(--sage);color:white;border:none;cursor:pointer;" class="reveal reveal-delay-3">Commencer mon parcours</a>
+          <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:32px;background:var(--sage);color:white;border:none;cursor:pointer;">Commencer mon parcours</a>
         </div>
       </div>
 
@@ -1128,7 +1125,6 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
         </div>
       </div>
 
-      <!-- AREAS OF FOCUS -->
       <div class="focus-section" style="margin:0 -40px;padding:80px 0;">
         <div class="focus-inner">
           <div class="focus-header">
@@ -1175,7 +1171,7 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
             </div>
             <div class="focus-card reveal reveal-delay-1">
               <div class="focus-num">08</div>
-              <h3>Phobie & peurs</h3>
+              <h3>Phobie &amp; peurs</h3>
               <p>Surmontez vos peurs limitantes et récupérez votre liberté de vivre sans restrictions.</p>
             </div>
             <div class="focus-card reveal reveal-delay-2">
@@ -1251,43 +1247,58 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
 
         <div class="contact-form reveal reveal-delay-2">
           <h3>Envoyez-moi un message</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Prénom</label>
-              <input type="text" placeholder="Votre prénom" />
+          <div id="form-success" style="display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:4px;padding:20px;text-align:center;color:#2e7d32;margin-bottom:20px;">
+            <strong>Message envoyé !</strong><br>Je vous répondrai dans les plus brefs délais.
+          </div>
+          <div id="form-error" style="display:none;background:#ffebee;border:1px solid #ef9a9a;border-radius:4px;padding:20px;text-align:center;color:#c62828;margin-bottom:20px;">
+            Une erreur est survenue. Veuillez réessayer ou appeler le (514) 746-8201.
+          </div>
+          <form id="contactForm" action="https://formspree.io/f/xpwzgkrd" method="POST" novalidate>
+            <!-- Anti-spam honeypot -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Nouveau message — Hypnoz-Thérapie">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-prenom">Prénom <span style="color:var(--sage)">*</span></label>
+                <input id="f-prenom" type="text" name="prenom" placeholder="Votre prénom" required minlength="2" maxlength="50">
+              </div>
+              <div class="form-group">
+                <label for="f-nom">Nom <span style="color:var(--sage)">*</span></label>
+                <input id="f-nom" type="text" name="nom" placeholder="Votre nom" required minlength="2" maxlength="50">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-email">Courriel <span style="color:var(--sage)">*</span></label>
+                <input id="f-email" type="email" name="email" placeholder="votre@email.com" required maxlength="100">
+              </div>
+              <div class="form-group">
+                <label for="f-tel">Téléphone</label>
+                <input id="f-tel" type="tel" name="telephone" placeholder="(514) 000-0000" maxlength="20">
+              </div>
             </div>
             <div class="form-group">
-              <label>Nom</label>
-              <input type="text" placeholder="Votre nom" />
+              <label for="f-service">Service souhaité <span style="color:var(--sage)">*</span></label>
+              <select id="f-service" name="service" required>
+                <option value="">Sélectionnez un service</option>
+                <option>Troubles de l'humeur - Dépression</option>
+                <option>Coaching sportif</option>
+                <option>Gestion de la douleur</option>
+                <option>Arrêt du tabac</option>
+                <option>Troubles du sommeil</option>
+                <option>Gestion du poids</option>
+                <option>Anxiété</option>
+                <option>Phobie &amp; peurs</option>
+                <option>Préparation aux examens</option>
+                <option>Autre</option>
+              </select>
             </div>
-          </div>
-          <div class="form-row">
             <div class="form-group">
-              <label>Téléphone</label>
-              <input type="tel" placeholder="(514) 000-0000" />
+              <label for="f-message">Votre message <span style="color:var(--sage)">*</span></label>
+              <textarea id="f-message" name="message" placeholder="Décrivez brièvement votre démarche ou posez vos questions..." required minlength="10" maxlength="2000"></textarea>
             </div>
-          </div>
-          <div class="form-group">
-            <label>Service souhaité</label>
-            <select>
-              <option value="">Sélectionnez un services</option>
-              <option>Troubles de l'humeur - Dépression</option>
-              <option>Coaching sportif</option>
-              <option>Gestion de la douleur</option>
-              <option>Arrêt du tabac</option>
-              <option>Troubles du sommeil</option>
-              <option>Gestion du poids</option>
-              <option>Anxiété</option>
-              <option>Phobie & peurs</option>
-              <option>Préparation aux examens</option>
-              <option>Autre</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Votre message</label>
-            <textarea placeholder="Décrivez brièvement votre démarche ou posez vos questions..."></textarea>
-          </div>
-          <button class="form-submit">Envoyer le message</button>
+            <button type="submit" class="form-submit" id="form-btn">Envoyer le message</button>
+          </form>
         </div>
       </div>
     </div>
@@ -1335,7 +1346,6 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
         navbar.style.top = topbarH + 'px';
       }
     });
-    // init top
     navbar.style.top = (topbar ? topbar.offsetHeight : 0) + 'px';
 
     // ── BURGER ──
@@ -1355,10 +1365,8 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
     // ── PARALLAX ──
     function updateParallax() {
       const scrollY = window.scrollY;
-      // Hero parallax
       const heroBg = document.getElementById('heroBg');
       if (heroBg) heroBg.style.transform = `translateY(${scrollY * 0.35}px)`;
-      // CTA band parallax
       const ctaBg = document.getElementById('ctaBg');
       if (ctaBg) {
         const ctaSection = ctaBg.closest('.parallax-section');
@@ -1387,6 +1395,67 @@ Infirmier de formation en soins physiques et maladie mentale pendant 10 ans au s
       document.querySelectorAll('.hero-content .reveal').forEach(el => {
         setTimeout(() => el.classList.add('visible'), 300);
       });
+    });
+
+    // ── CONTACT FORM ──
+    const contactForm = document.getElementById('contactForm');
+    const formBtn = document.getElementById('form-btn');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    }
+
+    let submitCount = parseInt(sessionStorage.getItem('fs_count') || '0');
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      formSuccess.style.display = 'none';
+      formError.style.display = 'none';
+
+      if (submitCount >= 3) {
+        formError.style.display = 'block';
+        formError.textContent = 'Trop de tentatives. Veuillez appeler le (514) 746-8201.';
+        return;
+      }
+
+      const email = document.getElementById('f-email').value.trim();
+      if (!isValidEmail(email)) {
+        document.getElementById('f-email').focus();
+        document.getElementById('f-email').style.borderColor = '#c62828';
+        return;
+      }
+      document.getElementById('f-email').style.borderColor = '';
+
+      if (contactForm.querySelector('[name="_gotcha"]').value) return;
+
+      formBtn.disabled = true;
+      formBtn.textContent = 'Envoi en cours...';
+
+      try {
+        const data = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          submitCount++;
+          sessionStorage.setItem('fs_count', submitCount);
+          contactForm.reset();
+          formSuccess.style.display = 'block';
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          throw new Error('server');
+        }
+      } catch {
+        formError.style.display = 'block';
+      } finally {
+        formBtn.disabled = false;
+        formBtn.textContent = 'Envoyer le message';
+      }
     });
   </script>
 </body>
